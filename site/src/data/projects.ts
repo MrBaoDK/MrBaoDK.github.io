@@ -292,6 +292,62 @@ export const projects: Project[] = [
     },
   },
   {
+    title: 'Financial Margin Analysis Suite – Power BI Dashboards',
+    description:
+      'Three interconnected Power BI dashboards delivering gross, landing, and net margin intelligence for a remote client — built with PBIP project format, multi-dimensional DAX measures, and an enterprise-grade semantic model spanning 30+ tables.',
+    technologies: ['Power BI', 'DAX', 'PBIP', 'SQL Server', 'Power Query', 'TMDL'],
+    impact:
+      'End-to-end margin visibility across three financial dimensions; dynamic field parameters for responsive reporting; time-intelligence measures enabling budget-vs-actual drill-down at month-level granularity.',
+    category: 'Analytics',
+    year: '2024',
+    company: 'Freelance · Remote Client Delivery',
+    link: 'https://github.com/MrBaoDK/remote-successful-da-projects',
+    linkLabel: 'GitHub',
+    caseStudy: {
+      problem:
+        'The client needed consolidated financial margin visibility — gross, landing, and net — but their data lived across disparate SQL databases with no unified reporting layer, forcing manual spreadsheet reconciliation every reporting cycle.',
+      solution:
+        'Delivered three standalone Power BI (PBIP) solutions, each with a dedicated semantic model and interactive report layer. Shared DAX patterns handle time intelligence and budget-vs-actual comparisons; field parameters drive responsive visuals without duplicated measures.',
+      architecture:
+        'Power BI PBIP project format (version-controlled) · Semantic models with 30+ tables (Gross Margin) · TMDL scripts for measure definitions · DAX time-intelligence library (current/previous/future periods) · SQL data sources (HavasConnectParis, HITINVHST) · Scheduled refresh.',
+      results: [
+        'Gross Margin: dynamic Budget / Réel / Ecart KPI tracking with Company → Community → Sub-Community drill-down',
+        'Landing Margin: interactive margin performance dashboard replacing manual reconciliation',
+        'Net Margin: TMDL-driven bottom-line profitability analysis with advanced measure definitions',
+        'All three reports version-controlled in PBIP format for collaborative development',
+        'Delivered iteratively — Gross Margin evolved from v1.0 to v1.3 with changelog tracking',
+      ],
+    },
+  },
+  {
+    title: 'Test Combination Selector – Statistical QA Automation',
+    description:
+      'A Python desktop application that automates the selection of optimal 10-sample test combinations from raw CSV data using delta thresholds and standard deviation criteria — replacing a tedious manual process across 382 test specifications per sample.',
+    technologies: ['Python', 'Pandas', 'Tkinter', 'Jupyter Notebook'],
+    impact:
+      'Eliminated manual test-group selection across 382 specification columns; algorithmic ranking by standard deviation ensures statistically valid groupings; GUI enables non-technical QA analysts to run the tool independently.',
+    category: ['AI/Automation', 'Analytics'],
+    year: '2024',
+    company: 'Freelance · Remote Client Delivery',
+    link: 'https://github.com/MrBaoDK/remote-successful-da-projects',
+    linkLabel: 'GitHub',
+    caseStudy: {
+      problem:
+        'QA engineers needed to identify the best 10-sample combinations from large CSV datasets (382 test specs per sample) based on statistical thresholds — a process done manually that was both time-consuming and inconsistently applied across different analysts.',
+      solution:
+        'Prototyped the core algorithm in Jupyter Notebook (Google Colab) for rapid iteration, then packaged it into a production Tkinter GUI. The `TCS` class implements a sliding-window combination search with dual delta criteria and std deviation ranking, outputting a clean filtered CSV.',
+      architecture:
+        'Python 3.8+ · Pandas 2.x for CSV parsing and grouping by SerialNumber · Custom TCS class with sliding-window combination search · Tkinter GUI with file picker for input/output CSVs · Jupyter Notebook for algorithm prototyping.',
+      results: [
+        'Automated selection across 382 test specifications per sample group',
+        'Delta thresholds enforced programmatically (RSSI < 0.25, Max Power < 0.20)',
+        'Combinations ranked by ascending standard deviation — best group auto-selected',
+        'Tkinter GUI enables QA analysts to run without Python knowledge',
+        'Prototype-to-production path: Google Colab → packaged desktop app',
+      ],
+    },
+  },
+  {
     title: 'baodk.tech – This Portfolio Site',
     description:
       'A high-performance personal portfolio built from scratch with React, TypeScript, and Vite — featuring a custom Cyber Obsidian design system, an AI chat assistant, code-split lazy loading, and GitHub Pages deployment.',
