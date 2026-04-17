@@ -71,7 +71,49 @@ export const projects: Project[] = [
         'Automated scoring with performance-based time multipliers',
         'Fully responsive UI for seamless engagement across all devices',
       ],
+    }
+  },
+  {
+    title: 'VN Vortex – GA4-to-BigQuery Analytics Platform',
+    description:
+      'Full-stack SaaS platform connecting Google Analytics 4 with BigQuery, enabling Vietnamese businesses to export, warehouse, and monetize their analytics data — with integrated payment processing and multi-tier subscriptions.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'FastAPI',
+      'Python',
+      'Supabase',
+      'PostgreSQL',
+      'BigQuery',
+      'PayOS',
+      'Redis',
+      'Docker',
+    ],
+    impact:
+      'Led technical architecture from zero to production; designed 15+ API endpoints, 3 frontend apps, and end-to-end OAuth + payment flows for the Vietnamese market.',
+    category: 'Full-Stack SaaS',
+    year: '2025 - Present',
+    company: 'VN Vortex Data · Analytics Startup',
+    caseStudy: {
+      problem:
+        'Vietnamese SMBs lacked an affordable, localized solution to export GA4 data into BigQuery for deeper analytics — existing tools were English-only, USD-priced, and required heavy GCP expertise.',
+      solution:
+        'Built a turnkey platform: OAuth-based GA4 onboarding → automatic BigQuery provisioning → scheduled data sync → PayOS-powered VND subscriptions — all behind a Vietnamese-first management console.',
+      architecture:
+        'pnpm monorepo · React + Vite (app-ui, home-ui) · FastAPI + Supabase backend · PostgreSQL + Redis · BigQuery data warehouse · PayOS payment gateway · Bitbucket Pipelines CI/CD.',
+      results: [
+        'Designed and shipped end-to-end platform as sole tech lead',
+        'Multi-currency pricing engine (VND/USD) with automatic conversion',
+        'Storage Engine for data warehouse management',
+        'Tracking Engine for automated GA4 data pipeline configuration',
+        'Integrations Dashboard with real-time sync status',
+        'Full i18n localization (Vietnamese/English)',
+      ],
     },
+    link: 'https://vn-vortexdata.com',
+    linkLabel: 'Website',
   },
   {
     title: 'CDGA – AI-Assisted Document Gap Analysis',

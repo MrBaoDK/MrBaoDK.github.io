@@ -3,15 +3,15 @@ import { TimelineItem } from '@baodk-site/types';
 export const careerTimeline: TimelineItem[] = [
   {
     year: '2025 - Present',
-    title: 'Power BI Coach (1-1)',
-    company: 'Freelance - Havas Paris',
+    title: 'Tech Lead',
+    company: 'VN Vortex Data',
     description:
-      'Mentoring BI developers on advanced DAX, data modeling, and visualization best practices for marketing analytics.',
+      'Leading full-stack architecture and development for a GA4-to-BigQuery analytics SaaS platform — from system design to production deployment.',
     achievements: [
-      'Provided 1-1 coaching for BI developers at Havas Paris',
-      'Restructured data models cutting build time from 2 days to <1 day',
-      'Optimized DAX measures for complex campaign performance tracking',
-      'Established data modeling standards for sustainable dashboard growth',
+      'Architected monorepo with React + FastAPI serving 3 frontends and 15+ API endpoints',
+      'Designed subscription billing with PayOS integration (VND/USD multi-currency)',
+      'Built Storage Engine, Tracking Engine, and Integrations Dashboard modules',
+      'Implemented JWT auth flow with Supabase, RBAC, and i18n localization',
     ],
   },
   {
