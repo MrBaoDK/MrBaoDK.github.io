@@ -31,7 +31,7 @@ const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <div className='h-4 bg-white/[0.03] border-b border-white/5 flex items-center justify-between px-6 md:px-10 pointer-events-none select-none shrink-0'>
         <div className='flex gap-4 md:gap-8'>
           <span className='text-[5px] md:text-[7px] font-black text-white/10 uppercase tracking-[0.3em]'>
-            Session://BAO-NTEL-V4.0
+            Session://BAO-NTEL-V4.1
           </span>
           <span className='text-[5px] md:text-[7px] font-black text-white/10 uppercase tracking-[0.3em] hidden sm:inline'>
             Protocol: Neural-TLS 1.3
