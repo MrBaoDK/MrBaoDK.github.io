@@ -1,4 +1,4 @@
-import{j as e,y as d,z as c,v as m,A as x}from"./index-D6fnigjM.js";const h=({isOpen:a,onClose:o,formData:t})=>{const l=c.EMAIL.label,n=encodeURIComponent(`Inquiry from ${t.name} (${t.company||"Individual"})`),r=encodeURIComponent(`Name: ${t.name}
+import{j as e,z as d,A as c,v as m,B as x}from"./index-wDw5cjTD.js";const h=({isOpen:a,onClose:o,formData:t})=>{const l=c.EMAIL.label,n=encodeURIComponent(`Inquiry from ${t.name} (${t.company||"Individual"})`),r=encodeURIComponent(`Name: ${t.name}
 Email: ${t.email}
 Company: ${t.company||"N/A"}
 
