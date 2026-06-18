@@ -1,8 +1,7 @@
 import React from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
-import GenericModal from '@baodk-site/components/GenericModal';
 import type { Project } from '@baodk-site/types';
+import { GenericIcon, GenericModal } from '@mrbaodk/ui';
 
 interface ProjectCaseStudyModalProps {
   project: Project | null;

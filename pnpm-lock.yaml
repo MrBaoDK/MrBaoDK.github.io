@@ -8,8 +8,67 @@ importers:
 
   .: {}
 
+  packages/eslint-config:
+    dependencies:
+      '@eslint/js':
+        specifier: ^9.39.4
+        version: 9.39.4
+      eslint:
+        specifier: ^9.0.0
+        version: 9.39.4(jiti@2.6.1)
+      eslint-plugin-react-hooks:
+        specifier: ^7.0.1
+        version: 7.0.1(eslint@9.39.4(jiti@2.6.1))
+      eslint-plugin-react-refresh:
+        specifier: ^0.5.2
+        version: 0.5.2(eslint@9.39.4(jiti@2.6.1))
+      eslint-plugin-simple-import-sort:
+        specifier: ^12.0.0
+        version: 12.1.1(eslint@9.39.4(jiti@2.6.1))
+      globals:
+        specifier: ^17.4.0
+        version: 17.4.0
+      typescript-eslint:
+        specifier: ^8.57.2
+        version: 8.57.2(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
+
+  packages/theme: {}
+
+  packages/typescript-config: {}
+
+  packages/ui:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@19.0.0)
+    devDependencies:
+      '@mrbaodk/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@mrbaodk/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@types/react':
+        specifier: ^18.3.23
+        version: 18.3.28
+      '@types/react-dom':
+        specifier: ^18.3.7
+        version: 18.3.7(@types/react@18.3.28)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
   site:
     dependencies:
+      '@mrbaodk/theme':
+        specifier: workspace:*
+        version: link:../packages/theme
+      '@mrbaodk/ui':
+        specifier: workspace:*
+        version: link:../packages/ui
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -23,6 +82,12 @@ importers:
       '@eslint/js':
         specifier: ^9.39.4
         version: 9.39.4
+      '@mrbaodk/eslint-config':
+        specifier: workspace:*
+        version: link:../packages/eslint-config
+      '@mrbaodk/typescript-config':
+        specifier: workspace:*
+        version: link:../packages/typescript-config
       '@tailwindcss/postcss':
         specifier: ^4.1.12
         version: 4.2.2

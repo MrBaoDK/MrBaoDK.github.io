@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GenericModal from '@baodk-site/components/GenericModal';
 import { SOCIALS } from '@baodk-site/data/socials';
+import { GenericModal } from '@mrbaodk/ui';
 
 interface EmailProviderModalProps {
   isOpen: boolean;

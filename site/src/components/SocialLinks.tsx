@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
 import { SOCIALS } from '@baodk-site/data/socials';
+import { GenericIcon } from '@mrbaodk/ui';
 
 interface SocialLinksProps {
   label: string;

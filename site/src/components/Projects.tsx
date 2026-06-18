@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
 import ProjectCaseStudyModal from '@baodk-site/components/ProjectCaseStudyModal';
 import { projects } from '@baodk-site/data/projects';
 import type { Project } from '@baodk-site/types';
 import { handleNavClick } from '@baodk-site/utils/navigation';
+import { GenericIcon } from '@mrbaodk/ui';
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

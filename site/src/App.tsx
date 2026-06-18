@@ -2,11 +2,11 @@ import React, { Suspense, useCallback, useEffect, useState } from 'react';
 
 import ChatAssistant from '@baodk-site/components/chat/ChatAssistant';
 import ChatHero from '@baodk-site/components/ChatHero';
-import LiquidGrid from '@baodk-site/components/effects/LiquidGrid';
-import GenericModal from '@baodk-site/components/GenericModal';
 import LandingHero from '@baodk-site/components/LandingHero';
 import ChatLayout from '@baodk-site/layouts/ChatLayout';
 import LandingLayout from '@baodk-site/layouts/LandingLayout';
+import { LiquidGrid } from '@mrbaodk/ui';
+import { GenericModal } from '@mrbaodk/ui';
 
 export interface Message {
   role: 'user' | 'ai';
