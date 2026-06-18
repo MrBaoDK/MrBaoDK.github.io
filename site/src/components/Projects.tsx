@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
     'Data Engineering',
     'Analytics',
     'AI/Automation',
-    'Full-Stack SaaS'
+    'Full-Stack SaaS',
   ];
 
   const filteredProjects =

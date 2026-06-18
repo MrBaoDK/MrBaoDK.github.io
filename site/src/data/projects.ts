@@ -71,7 +71,7 @@ export const projects: Project[] = [
         'Automated scoring with performance-based time multipliers',
         'Fully responsive UI for seamless engagement across all devices',
       ],
-    }
+    },
   },
   {
     title: 'VN Vortex – GA4-to-BigQuery Analytics Platform',

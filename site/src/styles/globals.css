@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "@mrbaodk/theme/index.css";
+@import '@mrbaodk/theme/index.css';
 @source "./index.html";
 @source "./src";
 @source "../../../packages/ui/src";

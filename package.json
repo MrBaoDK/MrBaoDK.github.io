@@ -4,6 +4,8 @@
   "description": "Personal site",
   "scripts": {
     "dev": "pnpm --filter @mrbaodk/site start",
+    "dev:chat-proxy-api": "pnpm --filter @mrbaodk/chat-proxy-api dev",
+    "deploy:chat-proxy-api": "pnpm --filter @mrbaodk/chat-proxy-api cf-deploy",
     "build": "pnpm --filter @mrbaodk/site build",
     "preview": "pnpm --filter @mrbaodk/site preview",
     "gh-deploy": "pnpm --filter @mrbaodk/site gh-deploy",

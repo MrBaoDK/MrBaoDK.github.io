@@ -25,7 +25,12 @@ import { VscAzure } from 'react-icons/vsc';
 
 import { Capability } from '@baodk-site/types';
 // Custom/Internal Modular SVGs
-import { PlaywrightIcon as Playwright, PowerAppsIcon as PowerApps, PowerAutomateIcon as PowerAutomate, PowerBIIcon as PowerBI } from '@mrbaodk/ui';
+import {
+  PlaywrightIcon as Playwright,
+  PowerAppsIcon as PowerApps,
+  PowerAutomateIcon as PowerAutomate,
+  PowerBIIcon as PowerBI,
+} from '@mrbaodk/ui';
 
 export const capabilities: Capability[] = [
   {

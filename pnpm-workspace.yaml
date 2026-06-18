@@ -1,6 +1,7 @@
 packages:
   - site
   - packages/*
+  - apps/*
 
 onlyBuiltDependencies:
   - core-js-pure
