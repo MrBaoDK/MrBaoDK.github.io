@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
 import { capabilities } from '@baodk-site/data/capabilities';
 import { Technology } from '@baodk-site/types';
 import { handleNavClick } from '@baodk-site/utils/navigation';
+import { GenericIcon } from '@mrbaodk/ui';
 
 const Capabilities: React.FC = () => {
   const onNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {

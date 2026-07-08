@@ -2,27 +2,151 @@ import type { Project } from '@baodk-site/types';
 
 export const projects: Project[] = [
   {
+    title: 'Affiliate Machine – AI-Powered Bio-Link Ecosystem',
+    description:
+      'A high-scale, distributed monorepo platform for affiliate marketers, featuring automated product discovery, AI-driven content generation, and real-time analytics.',
+    technologies: [
+      'Next.js',
+      'Fastify',
+      'PostgreSQL',
+      'ClickHouse',
+      'Redis',
+      'BullMQ',
+      'Drizzle ORM',
+      'Docker',
+      'Turbo',
+    ],
+    impact:
+      'Distributed architecture with 5+ specialized microservices; AI-automated content creation for social platforms; real-time performance tracking with ClickHouse analytics.',
+    category: ['Software Engineering', 'AI/Automation'],
+    year: '2026',
+    company: 'Personal · Indie Project',
+    caseStudy: {
+      problem:
+        'Affiliate marketers often struggle with fragmented tools for link management, content creation, and performance tracking, leading to operational bottlenecks and inconsistent branding.',
+      solution:
+        'Developed a unified, AI-driven ecosystem that centralizes the entire affiliate workflow—from automated product "Viral Score" assessment to multi-platform content generation and consolidated analytics.',
+      architecture:
+        'Distributed Monorepo (Turbo) · Fastify API · Next.js (Gallery & Console) · BullMQ workers for background tasks · Hybrid storage (PostgreSQL/ClickHouse/Redis/MinIO).',
+      results: [
+        'Automated ingestion of high-potential products from top marketplaces',
+        'Streamlined "Click-to-Content" workflow via AI-assisted script generation',
+        'High-concurrency ready with Redis-based job queuing and worker scaling',
+        'Consolidated analytics dashboard for cross-platform conversion tracking',
+      ],
+    },
+  },
+  {
+    title: 'Drag Master – Kahoot-Inspired Real-time PvP',
+    description:
+      'A Kahoot-inspired multiplayer drag-and-drop game designed for interactive knowledge assessment and real-time competitive learning in group activities.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'NestJS',
+      'PostgreSQL',
+      'Redis',
+      'Socket.io',
+      'Vite',
+      'pnpm',
+    ],
+    impact:
+      'Ensures sub-100ms real-time synchronization; 18+ game logic tests; rapid-deployment architecture for interactive education and group knowledge sharing.',
+    category: 'Software Engineering',
+    year: '2025',
+    company: 'Personal · Indie Project',
+    link: 'https://github.com/MrBaoDK/dnd-pvp',
+    linkLabel: 'GitHub',
+    caseStudy: {
+      problem:
+        'Interactive learning platforms like Kahoot are highly effective but often lack diverse interaction models beyond multiple choice for complex knowledge assessment.',
+      solution:
+        'Developed a "Kahoot-like" framework specifically for drag-and-drop mechanics, utilizing NestJS and WebSockets to provide a frictionless, real-time competitive environment.',
+      architecture:
+        'NestJS + WebSocket Gateway · Redis session store · PostgreSQL DB · React + Vite frontend · Optimized for rapid one-click deployment.',
+      results: [
+        'Achieved sub-100ms real-time synchronization latency',
+        'Built for rapid deployment in knowledge-sharing / training sessions',
+        'Implemented robust role-based routing (Host/Player/Simulation)',
+        'Automated scoring with performance-based time multipliers',
+        'Fully responsive UI for seamless engagement across all devices',
+      ],
+    },
+  },
+  {
+    title: 'VN Vortex – GA4-to-BigQuery Analytics Platform',
+    description:
+      'Full-stack SaaS platform connecting Google Analytics 4 with BigQuery, enabling Vietnamese businesses to export, warehouse, and monetize their analytics data — with integrated payment processing and multi-tier subscriptions.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'FastAPI',
+      'Python',
+      'Supabase',
+      'PostgreSQL',
+      'BigQuery',
+      'PayOS',
+      'Redis',
+      'Docker',
+    ],
+    impact:
+      'Led technical architecture from zero to production; designed 15+ API endpoints, 3 frontend apps, and end-to-end OAuth + payment flows for the Vietnamese market.',
+    category: 'Full-Stack SaaS',
+    year: '2025 - Present',
+    company: 'VN Vortex Data · Analytics Startup',
+    caseStudy: {
+      problem:
+        'Vietnamese SMBs lacked an affordable, localized solution to export GA4 data into BigQuery for deeper analytics — existing tools were English-only, USD-priced, and required heavy GCP expertise.',
+      solution:
+        'Built a turnkey platform: OAuth-based GA4 onboarding → automatic BigQuery provisioning → scheduled data sync → PayOS-powered VND subscriptions — all behind a Vietnamese-first management console.',
+      architecture:
+        'pnpm monorepo · React + Vite (app-ui, home-ui) · FastAPI + Supabase backend · PostgreSQL + Redis · BigQuery data warehouse · PayOS payment gateway · Bitbucket Pipelines CI/CD.',
+      results: [
+        'Designed and shipped end-to-end platform as sole tech lead',
+        'Multi-currency pricing engine (VND/USD) with automatic conversion',
+        'Storage Engine for data warehouse management',
+        'Tracking Engine for automated GA4 data pipeline configuration',
+        'Integrations Dashboard with real-time sync status',
+        'Full i18n localization (Vietnamese/English)',
+      ],
+    },
+    link: 'https://vn-vortexdata.com',
+    linkLabel: 'Website',
+  },
+  {
     title: 'CDGA – AI-Assisted Document Gap Analysis',
     description:
-      'End-to-end AI workflow integrating OCR, LLM parsing, classification, markdown processing, dashboards, and automated notifications to automate compliance document review.',
-    technologies: ['Python', 'FastAPI', 'LangChain', 'OpenAI', 'PostgreSQL', 'Redis', 'Docker'],
+      'Enterprise-grade document analysis platform using LlamaIndex and React to automate version comparison and identify compliance gaps in multi-page industrial specifications.',
+    technologies: [
+      'Python (FastAPI)',
+      'React 18',
+      'TypeScript',
+      'LlamaIndex',
+      'PostgreSQL',
+      'Pandoc',
+      'Docker',
+      'UV',
+    ],
     impact:
-      'Cut manual document handling by 60% — saving ~120 hrs/month across 3 compliance teams; accelerated time-to-compliance review by 40%.',
-    category: 'AI/Automation',
+      'Accelerated time-to-compliance review by 40% and cut manual document handling by 60% (~120 hrs/month) via automated DOCX structure analysis.',
+    category: ['AI/Automation', 'Software Engineering'],
     year: '2024',
     company: 'Jabil · Electronics Manufacturing',
     caseStudy: {
       problem:
         'Compliance teams at a Fortune 500 contract manufacturer were manually cross-referencing hundreds of multi-page supplier and quality documents against regulatory checklists — an error-prone process taking days per audit cycle.',
       solution:
-        'Built a fully automated pipeline: OCR extracts text from scanned PDFs → LangChain + OpenAI classifies clause types and maps them to regulatory gaps → FastAPI serves results to a live dashboard with email/Slack notifications for flagged items.',
+        'Developed a high-performance pipeline using Pandoc for DOCX structure extraction and LlamaIndex for intelligent gap analysis, surfacing results via a custom administrative dashboard with automated notifications.',
       architecture:
-        'Celery task queue on Redis · async FastAPI backend · PostgreSQL for audit trail · Docker Compose for reproducible deployment · Power BI report layer on top of the PostgreSQL views.',
+        'Domain-Driven Design (DDD) · Custom Python Job Scheduler (Priority Queues) · FastAPI · React + Vite frontend · LDAP Enterprise Auth.',
       results: [
-        'Reduced manual document handling by 60% (~120 hrs/month saved)',
-        'Accelerated compliance review cycles by 40%',
-        '3 compliance teams onboarded with zero re-training requirement',
-        'Audit trail persisted in PostgreSQL for regulatory traceability',
+        'Automated structure extraction from multi-format documents (DOCX/MD)',
+        'Custom Job Scheduler with real-time monitoring dashboard and priority queues',
+        'Integrated LDAP / Enterprise Auth for seamless identity management',
+        '60% reduction in manual document handling and 40% faster review cycles',
+        'Audit trail persisted in PostgreSQL for full regulatory traceability',
       ],
     },
   },
@@ -80,7 +204,7 @@ export const projects: Project[] = [
     ],
     impact:
       'Improved FAI timeliness by 50%; prevented multiple high-cost inspection delays through proactive build plan notifications and real-time Kafka-driven monitoring.',
-    category: 'AI/Automation',
+    category: ['AI/Automation', 'Analytics'],
     year: '2023',
     company: 'Jabil · Electronics Manufacturing',
     caseStudy: {
@@ -210,6 +334,62 @@ export const projects: Project[] = [
     },
   },
   {
+    title: 'Financial Margin Analysis Suite – Power BI Dashboards',
+    description:
+      'Three interconnected Power BI dashboards delivering gross, landing, and net margin intelligence for a remote client — built with PBIP project format, multi-dimensional DAX measures, and an enterprise-grade semantic model spanning 30+ tables.',
+    technologies: ['Power BI', 'DAX', 'PBIP', 'SQL Server', 'Power Query', 'TMDL'],
+    impact:
+      'End-to-end margin visibility across three financial dimensions; dynamic field parameters for responsive reporting; time-intelligence measures enabling budget-vs-actual drill-down at month-level granularity.',
+    category: 'Analytics',
+    year: '2024',
+    company: 'Freelance · Remote Client Delivery',
+    link: 'https://github.com/MrBaoDK/remote-successful-da-projects',
+    linkLabel: 'GitHub',
+    caseStudy: {
+      problem:
+        'The client needed consolidated financial margin visibility — gross, landing, and net — but their data lived across disparate SQL databases with no unified reporting layer, forcing manual spreadsheet reconciliation every reporting cycle.',
+      solution:
+        'Delivered three standalone Power BI (PBIP) solutions, each with a dedicated semantic model and interactive report layer. Shared DAX patterns handle time intelligence and budget-vs-actual comparisons; field parameters drive responsive visuals without duplicated measures.',
+      architecture:
+        'Power BI PBIP project format (version-controlled) · Semantic models with 30+ tables (Gross Margin) · TMDL scripts for measure definitions · DAX time-intelligence library (current/previous/future periods) · SQL data sources (HavasConnectParis, HITINVHST) · Scheduled refresh.',
+      results: [
+        'Gross Margin: dynamic Budget / Réel / Ecart KPI tracking with Company → Community → Sub-Community drill-down',
+        'Landing Margin: interactive margin performance dashboard replacing manual reconciliation',
+        'Net Margin: TMDL-driven bottom-line profitability analysis with advanced measure definitions',
+        'All three reports version-controlled in PBIP format for collaborative development',
+        'Delivered iteratively — Gross Margin evolved from v1.0 to v1.3 with changelog tracking',
+      ],
+    },
+  },
+  {
+    title: 'Test Combination Selector – Statistical QA Automation',
+    description:
+      'A Python desktop application that automates the selection of optimal 10-sample test combinations from raw CSV data using delta thresholds and standard deviation criteria — replacing a tedious manual process across 382 test specifications per sample.',
+    technologies: ['Python', 'Pandas', 'Tkinter', 'Jupyter Notebook'],
+    impact:
+      'Eliminated manual test-group selection across 382 specification columns; algorithmic ranking by standard deviation ensures statistically valid groupings; GUI enables non-technical QA analysts to run the tool independently.',
+    category: ['AI/Automation', 'Analytics'],
+    year: '2024',
+    company: 'Freelance · Remote Client Delivery',
+    link: 'https://github.com/MrBaoDK/remote-successful-da-projects',
+    linkLabel: 'GitHub',
+    caseStudy: {
+      problem:
+        'QA engineers needed to identify the best 10-sample combinations from large CSV datasets (382 test specs per sample) based on statistical thresholds — a process done manually that was both time-consuming and inconsistently applied across different analysts.',
+      solution:
+        'Prototyped the core algorithm in Jupyter Notebook (Google Colab) for rapid iteration, then packaged it into a production Tkinter GUI. The `TCS` class implements a sliding-window combination search with dual delta criteria and std deviation ranking, outputting a clean filtered CSV.',
+      architecture:
+        'Python 3.8+ · Pandas 2.x for CSV parsing and grouping by SerialNumber · Custom TCS class with sliding-window combination search · Tkinter GUI with file picker for input/output CSVs · Jupyter Notebook for algorithm prototyping.',
+      results: [
+        'Automated selection across 382 test specifications per sample group',
+        'Delta thresholds enforced programmatically (RSSI < 0.25, Max Power < 0.20)',
+        'Combinations ranked by ascending standard deviation — best group auto-selected',
+        'Tkinter GUI enables QA analysts to run without Python knowledge',
+        'Prototype-to-production path: Google Colab → packaged desktop app',
+      ],
+    },
+  },
+  {
     title: 'baodk.tech – This Portfolio Site',
     description:
       'A high-performance personal portfolio built from scratch with React, TypeScript, and Vite — featuring a custom Cyber Obsidian design system, an AI chat assistant, code-split lazy loading, and GitHub Pages deployment.',
@@ -225,7 +405,7 @@ export const projects: Project[] = [
       'Lighthouse score 95+; sub-1s first paint; fully responsive from 320px to 4K; CI/CD pipeline deploys on every push to main.',
     category: 'AI/Automation',
     year: '2025',
-    company: 'Personal · Open Source',
+    company: 'Personal · Side Project',
     link: 'https://github.com/MrBaoDK/baodk.tech',
     linkLabel: 'GitHub',
     caseStudy: {

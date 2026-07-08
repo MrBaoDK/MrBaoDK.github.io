@@ -1,8 +1,7 @@
 import React from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
-import GenericModal from '@baodk-site/components/GenericModal';
 import type { Project } from '@baodk-site/types';
+import { GenericIcon, GenericModal } from '@mrbaodk/ui';
 
 interface ProjectCaseStudyModalProps {
   project: Project | null;
@@ -25,11 +24,20 @@ const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ project, 
         {/* Close + Meta row */}
         <div className='flex items-start justify-between gap-4 mb-4'>
           <div className='flex flex-wrap items-center gap-2'>
-            {project.category && (
-              <span className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1 rounded-full border border-[var(--color-primary)]/20'>
-                {project.category}
-              </span>
-            )}
+            {Array.isArray(project.category)
+              ? project.category.map((cat, i) => (
+                  <span
+                    key={i}
+                    className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1 rounded-full border border-[var(--color-primary)]/20'
+                  >
+                    {cat}
+                  </span>
+                ))
+              : project.category && (
+                  <span className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1 rounded-full border border-[var(--color-primary)]/20'>
+                    {project.category}
+                  </span>
+                )}
             {project.year && (
               <span className='flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-white/30'>
                 <GenericIcon icon='calendar_today' size='sm' />

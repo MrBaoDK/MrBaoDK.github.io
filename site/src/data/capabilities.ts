@@ -23,12 +23,14 @@ import {
 } from 'react-icons/si';
 import { VscAzure } from 'react-icons/vsc';
 
-// Custom/Internal Modular SVGs
-import Playwright from '@baodk-site/components/icons/Playwright';
-import PowerApps from '@baodk-site/components/icons/PowerApps';
-import PowerAutomate from '@baodk-site/components/icons/PowerAutomate';
-import PowerBI from '@baodk-site/components/icons/PowerBI';
 import { Capability } from '@baodk-site/types';
+// Custom/Internal Modular SVGs
+import {
+  PlaywrightIcon as Playwright,
+  PowerAppsIcon as PowerApps,
+  PowerAutomateIcon as PowerAutomate,
+  PowerBIIcon as PowerBI,
+} from '@mrbaodk/ui';
 
 export const capabilities: Capability[] = [
   {

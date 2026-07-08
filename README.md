@@ -22,9 +22,12 @@ This project uses a **pnpm workspace** to manage dependencies and packages.
 ├── .agents/             # AI Agent rules and workflows
 ├── site/                # Primary React application
 │   ├── src/             # Component source code
+│   │   ├── components/  # React components
+│   │   ├── data/        # Shared data files (projects, capabilities, etc.)
+│   │   └── styles/      # Global CSS and Tailwind configuration
 │   ├── public/          # Static assets
 │   └── package.json     # Site-specific dependencies
-├── package.json         # Workspace root configuration
+├── package.json         # Workspace root with shared scripts
 └── pnpm-workspace.yaml  # Workspace definitions
 ```
 
@@ -54,13 +57,13 @@ This project uses a **pnpm workspace** to manage dependencies and packages.
 
 4.  **Deploy to GitHub Pages**:
     ```sh
-    pnpm deploy
+    pnpm gh-deploy
     ```
 
 ## Development Workflow
 
 - **Rules**: Interaction rules for AI agents are located in [`.agents/rules`](.agents/rules).
-- **Styles**: Global styles and CSS variables are defined in `site/src/index.css`.
+- **Styles**: Global styles and CSS variables are defined in `site/src/styles/globals.css`.
 - **Imports**: Use the `@baodk-site/` alias for internal imports within the `site` package.
 
 ## License

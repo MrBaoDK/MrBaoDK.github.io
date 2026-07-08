@@ -93,7 +93,7 @@ const Footer: React.FC<FooterProps> = ({ simple = false }) => {
           className={`pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 ${!simple && 'mt-0'}`}
         >
           <p className='text-[10px] font-black uppercase tracking-[0.2em] text-white/20'>
-            © 2026 Bao DK. All Rights Reserved. Build v4.0.0
+            © 2026 Bao DK. All Rights Reserved. Build v4.1.0
           </p>
           <div className='flex gap-8'>
             <a

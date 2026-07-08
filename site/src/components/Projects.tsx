@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
 import ProjectCaseStudyModal from '@baodk-site/components/ProjectCaseStudyModal';
 import { projects } from '@baodk-site/data/projects';
 import type { Project } from '@baodk-site/types';
 import { handleNavClick } from '@baodk-site/utils/navigation';
+import { GenericIcon } from '@mrbaodk/ui';
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
-  const categories = ['All', 'Data Engineering', 'Analytics', 'AI/Automation'];
+  const categories = [
+    'All',
+    'Software Engineering',
+    'Data Engineering',
+    'Analytics',
+    'AI/Automation',
+    'Full-Stack SaaS',
+  ];
 
   const filteredProjects =
     selectedCategory === 'All'
       ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      : projects.filter((project) => {
+          if (!project.category) return false;
+          const categories = Array.isArray(project.category)
+            ? project.category
+            : [project.category];
+          return categories.includes(selectedCategory);
+        });
 
   const onNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     handleNavClick(e, id);
@@ -67,9 +80,22 @@ const Projects: React.FC = () => {
               >
                 {/* Category + Year */}
                 <div className='flex items-start justify-between gap-2 mb-4'>
-                  <span className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1.5 rounded-full border border-[var(--color-primary)]/20'>
-                    {project.category}
-                  </span>
+                  <div className='flex flex-wrap gap-1.5'>
+                    {Array.isArray(project.category)
+                      ? project.category.map((cat, i) => (
+                          <span
+                            key={i}
+                            className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-2.5 py-1.5 rounded-full border border-[var(--color-primary)]/20'
+                          >
+                            {cat}
+                          </span>
+                        ))
+                      : project.category && (
+                          <span className='text-[10px] font-black uppercase tracking-[0.2em] text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1.5 rounded-full border border-[var(--color-primary)]/20'>
+                            {project.category}
+                          </span>
+                        )}
+                  </div>
                   {project.year && (
                     <span className='flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-white/25 shrink-0 mt-1'>
                       <GenericIcon icon='calendar_today' size='sm' />

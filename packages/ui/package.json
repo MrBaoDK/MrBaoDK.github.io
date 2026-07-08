@@ -1,0 +1,20 @@
+{
+  "name": "@mrbaodk/ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@mrbaodk/eslint-config": "workspace:*",
+    "@mrbaodk/typescript-config": "workspace:*",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.0.0"
+  }
+}

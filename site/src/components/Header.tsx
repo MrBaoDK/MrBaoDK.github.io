@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import GenericIcon from '@baodk-site/components/GenericIcon';
 import { NAV_ITEMS } from '@baodk-site/data/navigation';
 import { handleNavClick } from '@baodk-site/utils/navigation';
+import { GenericIcon } from '@mrbaodk/ui';
 
 interface HeaderProps {
   onOpenChat: () => void;

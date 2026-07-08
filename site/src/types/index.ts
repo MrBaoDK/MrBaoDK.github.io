@@ -24,7 +24,7 @@ export interface CaseStudySection {
 export interface Project extends BaseContent {
   technologies: string[]; // Keeping as string[] for now per user feedback
   impact: string;
-  category?: string;
+  category?: string | string[];
   /** Year range, e.g. "2024" or "2023 – 2024" */
   year?: string;
   /** Organisation / industry context shown on the card */

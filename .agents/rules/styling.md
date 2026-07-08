@@ -12,7 +12,9 @@
 - **Body**: `Manrope` (400, 500)
 
 ## Icons
-- Use **Material Symbols Outlined** via Google Fonts.
+- Use the **GenericIcon** component for all iconography.
+- Supports **React Icons** (Lucide, SimpleIcons, etc.) and **Material Symbols Outlined**.
+- Icons should use CSS variables for colors (e.g. `var(--color-primary)`).
 
 ## Aesthetics (Cyber Obsidian)
 - **Glassmorphism**: Use `bg-glass` utility or `backdrop-filter: blur(10px)` with semi-transparent backgrounds for cards and overlays.

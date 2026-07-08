@@ -8,10 +8,11 @@ trigger: always_on
 - **Use `pnpm` exclusively.** Do not use `npm` or `yarn`.
 
 ## Commands
-- **Install**: `pnpm install`
+- **Install**: `pnpm install` (always from root)
 - **Start**: `pnpm dev` (from root) or `pnpm start` (from `site/`)
-- **Build**: `pnpm build`
-- **Deploy**: `pnpm run deploy` (deploys to `gh-pages` with `baodk.tech` CNAME)
+- **Build**: `pnpm build` (from root)
+- **Deploy**: `pnpm gh-deploy` (from root, deploys to `gh-pages` with `baodk.tech` CNAME)
+- **Format**: `pnpm format` (from root)
 
 ## Simple Testing
 - Test components manually in the browser.

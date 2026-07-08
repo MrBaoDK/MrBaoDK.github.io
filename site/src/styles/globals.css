@@ -1,6 +1,8 @@
 @import 'tailwindcss';
+@import '@mrbaodk/theme/index.css';
 @source "./index.html";
 @source "./src";
+@source "../../../packages/ui/src";
 
 /* Reset and base styles */
 /* Use Tailwind Preflight defaults; avoid zeroing all margins globally */
@@ -8,52 +10,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-:root {
-  /* Cyber Obsidian (baodk.tech) Palette */
-  --color-primary: #e94560;
-  /* Accent Crimson */
-  --color-accent: #e94560;
-  /* Accent Crimson */
-  --color-accent-dark: #c03940;
-  /* Darker crimson for hover */
-  --color-dark: #1a1a2e;
-  /* Deep Space Blue (Main Background) */
-  --color-navy: #0f3460;
-  /* Midnight Navy (Secondary/Cards) */
-  --color-white: #eeeeee;
-  /* Primary Light Text */
-  --color-light-gray: #c0c0c0;
-  /* Silver (Muted Text) */
-  --color-text: #eeeeee;
-  /* Main text color */
-  --color-text-light: #c0c0c0;
-  /* Light/Muted text color */
-  --color-background: #1a1a2e;
-  /* Background color */
-  /* Stitch-inspired Palette */
-  /* --color-primary: #e91e63;      /* vibrant pink-red 
-  --color-accent: #e91e63;
-  --color-background: #0a0a0a;   Deep black */
-  --color-card: #1a1a1a;
-  /* Dark gray for cards */
-  --color-text: #ffffff;
-  --color-text-dim: #a0a0a0;
-  /* light gray for subtext */
-
-  /* Fonts */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Manrope', sans-serif;
-
-  /* Additional utility colors */
-  --color-border: rgba(192, 192, 192, 0.2);
-  --color-muted: #6b7280;
-  --spacing-page: 1.5rem;
-
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 html {
